@@ -9,4 +9,4 @@ A Rent Boat app accomplish using the Android Navigation Architecture.
  - Deep linking from Notifications.
  
  
- [ref](https://developer.android.com/reference/androidx/navigation/fragment/NavHostFragment)
+ [reference](https://developer.android.com/reference/androidx/navigation/fragment/NavHostFragment)
