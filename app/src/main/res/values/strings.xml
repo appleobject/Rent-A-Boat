@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android Navigation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="alt_app_name">Rent-a-Boat</string>
+    <string name="login">Login</string>
+    <string name="rent_a_boat">Rent-A-Boat</string>
+    <string name="full_name">Full Name</string>
+    <string name="register">Register</string>
+</resources>
