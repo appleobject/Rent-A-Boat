@@ -7,4 +7,11 @@
     <string name="rent_a_boat">Rent-A-Boat</string>
     <string name="full_name">Full Name</string>
     <string name="register">Register</string>
+    <string name="feed">Feed</string>
+    <string name="orders">Orders</string>
+    <string name="canoe">Canoe</string>
+    <string name="tenerife">Tenerife</string>
+    <string name="_45_eur">45 EUR</string>
+    <string name="sail_boat">Sail Boat</string>
+    <string name="_99_eur">99 EUR</string>
 </resources>

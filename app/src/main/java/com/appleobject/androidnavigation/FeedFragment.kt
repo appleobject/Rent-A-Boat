@@ -5,10 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_welcome.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [WelcomeFragment.newInstance] factory method to
+ * Use the [FeedFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class WelcomeFragment : Fragment() {
+class FeedFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,20 +34,7 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_welcome, container, false)
-
-        view.findViewById<Button>(R.id.btnReg).setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_welcomeFragment_to_registrationFragment)
-            )
-        view.findViewById<Button>(R.id.btnLogin).setOnClickListener {
-            val email = editTextTextEmailAddress.text.toString()
-            val password = editTextTextPassword.text.toString()
-            if (email.isNotEmpty() && password.isNotEmpty()){
-                findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
-            }
-        }
-
-        return view
+        return inflater.inflate(R.layout.fragment_feed, container, false)
     }
 
     companion object {
@@ -61,12 +44,12 @@ class WelcomeFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment WelcomeFragment.
+         * @return A new instance of fragment FeedFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            WelcomeFragment().apply {
+            FeedFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

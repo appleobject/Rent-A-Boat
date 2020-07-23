@@ -5,10 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_welcome.*
+import android.widget.Toolbar
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.fragment_home.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +18,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [WelcomeFragment.newInstance] factory method to
+ * Use the [HomeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class WelcomeFragment : Fragment() {
+class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,17 +39,25 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_welcome, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        view.findViewById<Button>(R.id.btnReg).setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_welcomeFragment_to_registrationFragment)
-            )
-        view.findViewById<Button>(R.id.btnLogin).setOnClickListener {
-            val email = editTextTextEmailAddress.text.toString()
-            val password = editTextTextPassword.text.toString()
-            if (email.isNotEmpty() && password.isNotEmpty()){
-                findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
-            }
+        //BottomNavigationView
+        val navHostFragment =
+            childFragmentManager.findFragmentById(R.id.childFragment) as NavHostFragment
+        view?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+            ?.setupWithNavController(navController = navHostFragment.navController)
+
+        //Toolbar
+        view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarWithTheChildFragment)
+            .setupWithNavController(navController = navHostFragment.navController)
+
+        //Attach a listener to the navHostFragment to change the toolbar title to the destination label
+        val toolbar = view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarWithTheChildFragment)
+
+        navHostFragment.navController.
+        addOnDestinationChangedListener { controller, destination, arguments ->
+            toolbar.title = destination.label
+
         }
 
         return view
@@ -61,12 +70,12 @@ class WelcomeFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment WelcomeFragment.
+         * @return A new instance of fragment HomeFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            WelcomeFragment().apply {
+            HomeFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

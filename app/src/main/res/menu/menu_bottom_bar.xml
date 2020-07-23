@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/feedFragment"
+        android:title="@string/feed"
+        android:icon="@drawable/ic_custom_directions_boat_24"
+        android:iconTint="@color/colorAccent"
+        />
+    <item
+        android:id="@+id/ordersFragment"
+        android:title="@string/orders"
+        android:icon="@drawable/ic_order_crop_original_24"
+        android:iconTint="@color/colorAccent"
+        />
+</menu>

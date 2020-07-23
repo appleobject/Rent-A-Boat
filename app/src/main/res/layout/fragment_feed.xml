@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedFragment">
+
+
+    <ImageView
+        android:id="@+id/feedImageView"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_custom_directions_boat_24"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/feedImageView2"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_custom_directions_boat_24"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedImageView" />
+
+    <TextView
+        android:id="@+id/feedTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/canoe"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/feedImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/sail_boat"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/feedImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/feedTextView2" />
+
+    <TextView
+        android:id="@+id/feedTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tenerife"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/feedImageView"
+        app:layout_constraintTop_toBottomOf="@+id/feedTextView1" />
+
+    <TextView
+        android:id="@+id/feedTextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Costa Rica"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/feedImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/feedTextView" />
+
+    <TextView
+        android:id="@+id/feedTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_45_eur"
+        android:textSize="35sp"
+        android:textColor="@color/customTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/feedTextView2"
+        app:layout_constraintTop_toBottomOf="@+id/feedImageView" />
+
+    <TextView
+        android:id="@+id/feedTextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/_99_eur"
+        android:textColor="@color/customTextColor"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toEndOf="@+id/feedTextView4"
+        app:layout_constraintTop_toBottomOf="@+id/feedImageView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
