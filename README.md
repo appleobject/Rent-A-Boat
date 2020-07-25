@@ -1,7 +1,7 @@
 # Rent-A-Boat
 A Rent Boat app accomplish using the Android Navigation Architecture. 
 
-![screenshot](https://github.com/appleobject/Rent-A-Boat/blob/master/Screenshot%20(564).png)
+
 ![nav_graph](screenshot/nav_graph.png)
 ![nav_graph_home](screenshot/nav_graph_home.png)
 ![welcome](screenshot/welcome.png)
