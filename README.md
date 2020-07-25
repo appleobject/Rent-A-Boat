@@ -2,8 +2,13 @@
 A Rent Boat app accomplish using the Android Navigation Architecture. 
 
 ![screenshot](https://github.com/appleobject/Rent-A-Boat/blob/master/Screenshot%20(564).png)
-![nav_graph](nav_graph.png)
-![nav_graph_home](nav_graph_home.png)
+![nav_graph](screenshot/nav_graph.png)
+![nav_graph_home](screenshot/nav_graph_home.png)
+![welcome](screenshot/welcome.png)
+![feed](screenshot/feed.png)
+![order](screenshot/order.png)
+![boat](screenshot/boat.png)
+
 
  - The New Navigation Graph Editor.
  - Navigation Screen to Screen.
