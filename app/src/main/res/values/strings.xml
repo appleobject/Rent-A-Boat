@@ -14,4 +14,12 @@
     <string name="_45_eur">45 EUR</string>
     <string name="sail_boat">Sail Boat</string>
     <string name="_99_eur">99 EUR</string>
+    <string name="costa_brava">Costa Brava</string>
+    <string name="kayak">Kayak</string>
+    <string name="mallorca">Mallorca</string>
+    <string name="_120_eur">120 EUR</string>
+    <string name="name">Name</string>
+    <string name="location">Location</string>
+    <string name="_100_eur">100 EUR</string>
+    <string name="rent_now">Rent now!</string>
 </resources>
